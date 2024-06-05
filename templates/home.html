@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Witamy na blogu!</h1>
+    <p class="lead">Jest to prosty blog napisany komponentowo w celach edukacyjnych</p>
+    <hr class="my-4">
+    <p>Przycisk poniżej zabierze cię do postów</p>
+    <a class="btn btn-custom btn-lg" href="{{ url_for('blog.index') }}" role="button">Wyświetl bloga</a>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h2>Edytuj profil</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="username">Nazwa użytkownika</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}">
+            </div>
+            <div class="form-group">
+                <label for="first_name">Imię</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Nazwisko</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}">
+            </div>
+            <div class="form-group">
+                <label for="country">Pochodzenie</label>
+                <input type="text" class="form-control" id="country" name="country" value="{{ user.country }}">
+            </div>
+            <div class="form-group">
+                <label for="profile_image">Awatar</label>
+                <input type="file" class="form-control-file" id="profile_image" name="profile_image">
+            </div>
+            <button type="submit" class="btn btn-custom">Zapisz</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
